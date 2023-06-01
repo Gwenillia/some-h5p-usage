@@ -23,6 +23,7 @@ Developers with some JavaScript / React knowledge will familiarize very much eas
 - **ES6 Features:** [ES6 Guide](http://es6-features.org)
 - **Sass Documentation:** [Official Sass Guide](https://sass-lang.com/guide)
 - **Webpack bundler:** [Webpack guide](https://webpack.js.org/guides/getting-started/)
+- **`jsconfig.json` Information:** [VSC Documentation about jsconfig](https://code.visualstudio.com/docs/languages/jsconfig)
 
 ## Styling
 We use Sass modules for styling our components. Each component should have its own Sass file located in the `styles` directory, mirroring the structure of the `components` directory.
@@ -119,6 +120,32 @@ Here are some advantages of using JSX instead of JS:
 > Remember to import React in every JSX file:
 > ```jsx
 > import React from 'react';
+
+## PropTypes - Type Checking
+To ensure the accuracy of props passed to components, we use PropTypes for type checking in our React codebase. PropTypes exports a range of validators that can be used to make sure the data you receive is valid.
+
+> [!example] Example of Type checking using PropTypes
+> ```jsx
+> import PropTypes from 'prop-types';
+> 
+> const Component = ({ name, age }) => {
+>   return (
+>     <div>
+>	<h1>{name}</h1>
+>	{age && <p>{age} yo</p>}
+>   );
+> }
+> 
+> Component.propTypes = {
+>   name: PropTypes.string.isRequired,
+>   age: PropTypes.number,
+> }
+>
+> export default Component;
+
+Here, the `Component` expects to receive a `name` and an optional `age`. If `name` prop is not provided or it is of incorrect type, a warning will be shown in the JavaScript console. If `age` is provided but is not a number, a warning will also be shown. This helps us catching and fix problems earlier in development.
+	
+- **PropTypes Documentation:** [ReactJs PropTypes documentation](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
 ## Best Practices
 While working with our React.JS codebase, there are certain best practices to follow. Including:
