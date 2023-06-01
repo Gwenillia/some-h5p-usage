@@ -132,8 +132,9 @@ To ensure the accuracy of props passed to components, we use PropTypes for type 
 > const Component = ({ name, age }) => {
 >   return (
 >     <div>
->	<h1>{name}</h1>
->	{age && <p>{age} yo</p>}
+>       <h1>{name}</h1>
+>       {age && <p>{age} yo</p>}
+>     </div>
 >   );
 > }
 > 
