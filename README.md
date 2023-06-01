@@ -10,6 +10,7 @@ This document serves as a guide for using and implementing React.JS within our c
 - [Functional Components and Hooks](#functional-components-and-hooks)
 - [Testing](#testing)
 - [JSX](#jsx)
+- [PropTypes - Type Checking](#proptypes---type-checking)
 - [Best Practices](#best-practices)
 - [Conclusion](#conclusion)
 
