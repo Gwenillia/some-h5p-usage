@@ -89,22 +89,22 @@ We use Context API and `useReducer` hook for managing state.
 ## Functional Components and Hooks
 We primarily use functional components in conjunction with hooks.
 
-- `useState`: [useState Documentation](https://react.dev/reference/react/useState)
-- `useEffect`: [useEffect Documentation](https://react.dev/reference/react/useEffect)
-- `useContext`: [useContext Documentation](https://react.dev/reference/react/useContext)
-- `useReducer`: [useReducer Documentation](https://react.dev/reference/react/useReducer)
+- **`useState`:** [useState Documentation](https://react.dev/reference/react/useState)
+- **`useEffect`:** [useEffect Documentation](https://react.dev/reference/react/useEffect)
+- **`useContext`:** [useContext Documentation](https://react.dev/reference/react/useContext)
+- **`useReducer`:** [useReducer Documentation](https://react.dev/reference/react/useReducer)
 
 ## Testing
 Ideally, we should be integrating more testing into our workflow. We use Jest and React Testing Library.
 
-- Jest: [Jest Documentation](https://jestjs.io/docs/en/getting-started)
-- React Testing Library: [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
+- **Jest:** [Jest Documentation](https://jestjs.io/docs/en/getting-started)
+- **React Testing Library:** [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
 
 ## JSX
 We write our React code in JavaScript and we use the JSX Syntax.
 Meaning that JavaScript expressions are embedded inside `{}`. JSX will convert HTML tags into React elements. 
 
-- JSX: [JSX Documentation](https://react.dev/learn/writing-markup-with-jsx)
+- **JSX:** [JSX Documentation](https://react.dev/learn/writing-markup-with-jsx)
 
 > [!warning]
 > Remember to import React in every JSX file:
@@ -125,4 +125,4 @@ While working with our React.JS codebase, there are certain best practices to fo
 	- **`camelCase`:** For the name of our variables.
 
 ## Conclusion
-This document should give you a better understanding of how we use React.ks in our codebase.
+This document should give you a better understanding of how we use React.js in our codebase.
