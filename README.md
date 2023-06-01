@@ -106,6 +106,15 @@ Meaning that JavaScript expressions are embedded inside `{}`. JSX will convert H
 
 - **JSX:** [JSX Documentation](https://react.dev/learn/writing-markup-with-jsx)
 
+Here are some advantages of using JSX instead of JS:
+1. **Readability and Simplicity:** JSX makes our components easier to read and understand. It provides a clear picture of the DOM structure of a component, as it looks like regular HTML.
+
+2. **Easy to Identify:** In our codebase, we use `.jsx` extension for React components. This makes it easy to identify component files as opposed to other JavaScript files such as `index.js` in components folder or utility JavaScript files.
+
+3. **Performance:** JSX compiles into `React.createElement()` calls which is more efficient than creating elements with JavaScript and appending to the DOM.
+
+4. **Components as HTML Elements:** With JSX, we can use our custom components as if they were HTML elements, which makes the composition of our components a lot more intuitive.
+
 > [!warning]
 > Remember to import React in every JSX file:
 > ```jsx
