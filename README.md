@@ -3,11 +3,14 @@ This document serves as a guide for using and implementing React.JS within our c
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
-	- [Some useful Documentations](#some-useful-documentations)
+	- [Some useful Ressources](#some-useful-ressources)
+		- [Main ressources](#main-ressources)
+		- [Optional ressources](#optional-ressources)
 - [Styling](#styling)
 - [File Organization](#file-organization)
 - [State Management](#state-management)
 - [Functional Components and Hooks](#functional-components-and-hooks)
+- [Splitting Components](#splitting-components)
 - [Testing](#testing)
 - [JSX](#jsx)
 - [PropTypes - Type Checking](#proptypes---type-checking)
@@ -17,12 +20,23 @@ This document serves as a guide for using and implementing React.JS within our c
 ## Prerequisites
 Developers with some JavaScript / React knowledge will familiarize very much easier.
 
-### Some useful Documentations
-- **The Chase:** [The Chase - H5P Content Type](https://github.com/h5p/h5p-chase)
-- **JavaScript Documentation:** [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+### Some useful Ressources
+#### Main ressources
 - **React.JS documentation:** [Official React.JS Documentation](https://reactjs.org/tutorial/tutorial.html)
+- 	- [ ] Complete the starting tic tac toe challenge
+- **Thinking in React:** [React Documentation](https://react.dev/learn/thinking-in-react)
+- 	- [ ] Step 1 to be understand but check other steps as well
 - **ES6 Features:** [ES6 Guide](http://es6-features.org)
+- 	- [ ] Get familiar with modern JavaScript Concepts
 - **Sass Documentation:** [Official Sass Guide](https://sass-lang.com/guide)
+- 	- [ ] Familiarize yourself with mixins
+- 	- [ ] Familiarize yourself with variables
+- 	- [ ] Familiarize with .module files
+- **The Chase:** [The Chase - H5P Content Type](https://github.com/h5p/h5p-chase)
+- 	- [ ] Could be checked for some examples
+
+#### Optional ressources
+- **JavaScript Documentation:** [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - **Webpack bundler:** [Webpack guide](https://webpack.js.org/guides/getting-started/)
 - **`jsconfig.json` Information:** [VSC Documentation about jsconfig](https://code.visualstudio.com/docs/languages/jsconfig)
 
@@ -96,6 +110,19 @@ We primarily use functional components in conjunction with hooks.
 - **`useContext`:** [useContext Documentation](https://react.dev/reference/react/useContext)
 - **`useReducer`:** [useReducer Documentation](https://react.dev/reference/react/useReducer)
 
+## Splitting Components
+As your application grows, it might be helpful to start splitting components into smaller, reusable pieces. But how do you decide when to split a component? Here are some guidelines that can help:
+
+- **Single Responsibility Principle:** Each component should ideally do one thing. If it ends up growing, it should be split into smaller subcomponents.
+
+- **Reusability:** If a part of your UI is used in multiple places, it's a good idea to make it a separate component. This allows for code reuse and consistency across your app.
+
+- **Complexity:** If your component has too many lines of code or is becoming hard to understand, consider splitting it into smaller components. A good rule of thumb is if you have to scroll too much in your editor to see the entire component, it may be a sign that your component needs to be broken down.
+
+- **State Logic:** If a portion of your component has its own state or side effects (with hooks like `useState` or `useEffect`), it might be a good idea to split that part into its own component.
+
+Remember, splitting components is an art. And be aware that smaller components are usually easier to maintain and test.
+
 ## Testing
 Ideally, we should be integrating more testing into our workflow. We use Jest and React Testing Library.
 
@@ -151,6 +178,9 @@ Here, the `Component` expects to receive a `name` and an optional `age`. If `nam
 
 ## Best Practices
 While working with our React.JS codebase, there are certain best practices to follow. Including:
+
+- **One component = one file:**
+In React, a component is a reusable piece of code that returns a React element to be rendered to the page. In our codebase, we adhere to the principle of "One Component Per File". This means that each `.jsx` file in our components directory defines exactly one React component. This makes it easy to understand the structure of our application and locate specific components.
 
 - **Choosing `useState` versus `useReducer`:** 
 	`useState` is enough for simple state management. For complex state logic such as a state machine, `useReducer` is a better choice.
