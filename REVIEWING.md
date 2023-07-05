@@ -55,7 +55,7 @@ import { helperFunction } from '@/helpers/helperFile';
 - There should be no code duplication. If there is a duplicate, it might be sorted out either a common component or helper function, or whatever is suitable depending on the situation.
 
 ## TODOs
-- Check potential TODO related to the issue in the code by searching `SP2023-XX` or `TODO` in all files (should be removed and treated because the issue is normally solved).
+- Check potential TODO related to the issue in the code by searching  or `TODO` in all files (should be removed and treated because the issue is normally solved).
 
 ## Code Suggestions
 - If a part of the code seems not optimised or good, or if you have a better suggestion, mention it.
