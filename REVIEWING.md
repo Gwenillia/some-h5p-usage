@@ -8,6 +8,9 @@ Always remember the following rules while reviewing:
 
 The files in the review should match the scope of the related Jira issue. 
 
+## Merge Conflicts
+If there are merge conflicts, ask to solve the merge conflicts
+
 ## Code Formatting
 
 - There should be no more than 1 blank line separating code.
